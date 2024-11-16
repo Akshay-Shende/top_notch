@@ -54,9 +54,7 @@ const Testimonial = () => {
               }`}
             >
               <p>
-                <span className="text-[#a180ea]">"</span>
-                {testimonial.text}
-                <span className="text-[#a180ea]">"</span>
+              <span className="text-white">{testimonial.text}</span>
               </p>
             </div>
           ))}
