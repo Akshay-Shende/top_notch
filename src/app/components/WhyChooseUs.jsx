@@ -1,31 +1,94 @@
-import React from 'react';
+import React from "react";
+
+const FeatureCard = ({ imgSrc, title, description, link }) => {
+  return (
+    <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
+      {link ? (
+        <a href={link} className="group">
+          <img src={imgSrc} alt={title} className="mx-auto h-10 w-10" />
+          <h3 className="my-3 font-display font-medium group-hover:text-primary-500">
+            {title}
+          </h3>
+          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
+            {description}
+          </p>
+        </a>
+      ) : (
+        <>
+          <img src={imgSrc} alt={title} className="mx-auto h-10 w-10" />
+          <h3 className="my-3 font-display font-medium">{title}</h3>
+          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
+            {description}
+          </p>
+        </>
+      )}
+    </li>
+  );
+};
 
 const WhyChooseUs = () => {
-  const points = [
-    { image: 'https://via.placeholder.com/100', label: 'Quality', tooltip: 'We provide the highest quality services.' },
-    { image: 'https://via.placeholder.com/100', label: 'Customer Service', tooltip: '24/7 customer support available.' },
-    { image: 'https://via.placeholder.com/100', label: 'Expert Team', tooltip: 'Our team consists of experts in the field.' },
-    { image: 'https://via.placeholder.com/100', label: 'Affordable', tooltip: 'Competitive pricing with no hidden fees.' },
+  const features = [
+    {
+      imgSrc: "https://www.svgrepo.com/show/530438/ddos-protection.svg",
+      title: "Powered by ChatGPT",
+      description:
+        "The cutting-edge language model that makes interactions a breeze. With its user-friendly interface, effortlessly tap into the world of AI-generated text.",
+    },
+    {
+      imgSrc: "https://www.svgrepo.com/show/530442/port-detection.svg",
+      title: "Easy to use",
+      description:
+        "Simply input your subject, click the generate button, and the result will appear in seconds just like magick.",
+    },
+    {
+      imgSrc: "https://www.svgrepo.com/show/530444/availability.svg",
+      title: "Custom settings",
+      description:
+        "We offer advanced customization. You can freely combine options like roles, languages, publish, tones, lengths, and formats.",
+    },
+    {
+      imgSrc: "https://www.svgrepo.com/show/530440/machine-vision.svg",
+      title: "Free trial",
+      description:
+        "We offer a free trial service without login. We provide many payment options including pay-as-you-go and subscription.",
+      link: "/pricing",
+    },
+    {
+      imgSrc: "https://www.svgrepo.com/show/530450/page-analysis.svg",
+      title: "90+ templates",
+      description:
+        "We offer many templates covering areas such as writing, education, lifestyle and creativity to inspire your potential.",
+      link: "/templates",
+    },
+    {
+      imgSrc: "https://www.svgrepo.com/show/530453/mail-reception.svg",
+      title: "Use Anywhere",
+      description:
+        "Our product is compatible with multiple platforms including Web, Chrome, Windows and Mac, you can use MagickPen anywhere.",
+      link: "/download",
+    },
   ];
 
   return (
-    <div className="py-12 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
-      <div className="flex justify-center gap-8">
-        {points.map((point, index) => (
-          <div className="relative group" key={index}>
-            {/* Image */}
-            <img src={point.image} alt={point.label} className="w-24 h-24 object-cover rounded-full shadow-lg transition-transform duration-300 group-hover:scale-110" />
-            
-            {/* Tooltip */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-8 opacity-0 group-hover:opacity-100 bg-black text-white text-sm px-4 py-2 rounded-lg transition-opacity duration-300">
-              {point.tooltip}
-            </div>
-
-            {/* Label */}
-            <p className="mt-2 text-center font-semibold">{point.label}</p>
-          </div>
-        ))}
+    <div className="bg-gray-200 px-2 py-10">
+      <div id="features" className="mx-auto max-w-6xl">
+        <p className="text-center text-base font-semibold leading-7 text-primary-500">
+        Why Choose Us
+        </p>
+        <h3 className="text-center font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+        We Offer Full Service Auto Repair & Maintenance
+        </h3>
+        <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              imgSrc={feature.imgSrc}
+              title={feature.title}
+              description={feature.description}
+              link={feature.link}
+            />
+          ))}
+        </ul>
       </div>
     </div>
   );
