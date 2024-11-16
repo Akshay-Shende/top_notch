@@ -1,11 +1,11 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 
 const Carousel = () => {
   const images = [
-    'https://via.placeholder.com/1920x1080/FF5733/fff?text=Image+1',
-    'https://via.placeholder.com/1920x1080/33FF57/fff?text=Image+2',
-    'https://via.placeholder.com/1920x1080/5733FF/fff?text=Image+3',
+    '/Images/corousel1.jpg',
+    '/Images/corousel2.jpg',
+    '/Images/corousel3.jpg',
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,6 +28,17 @@ const Carousel = () => {
           alt={`Carousel image ${currentIndex + 1}`}
           className="w-full h-full object-cover"
         />
+      </div>
+
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Text and Button */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+        <h1 className="text-4xl font-bold mb-4">Performance without compromise</h1>
+        <button className="bg-black bg-opacity-50 text-white px-6 py-2 rounded-full">
+          Learn More
+        </button>
       </div>
 
       {/* Navigation Buttons */}
