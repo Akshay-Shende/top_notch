@@ -9,7 +9,7 @@ const Page = () => {
           Contact Us
         </h2>
         <p className="text-lg text-gray-600 text-center mb-8">
-          Get in touch with Top Notch Auto Care – we're here to help you with all your automotive needs.
+        Get in touch with Top Notch Auto Care – we&apos;re here to help you with all your automotive needs.
         </p>
 
         {/* Contact Section */}

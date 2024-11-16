@@ -29,7 +29,7 @@ const Page = () => {
               Our Mission
             </h3>
             <p className="text-gray-600 mb-4">
-              At Top Notch Auto Care, our mission is to keep your vehicle running smoothly and safely. We aim to deliver trustworthy, expert services that exceed our clients' expectations.
+            At Top Notch Auto Care, our mission is to keep your vehicle running smoothly and safely. We aim to deliver trustworthy, expert services that exceed our clients&#39; expectations.
             </p>
             
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -42,7 +42,10 @@ const Page = () => {
               - **Quality Service**: We use only top-quality parts and follow industry standards for every service.
             </p>
             <p className="text-gray-600 mb-2">
-              - **Customer Satisfaction**: From diagnostics to repairs, we put our customers' needs first.
+            <h3>Customer Satisfaction</h3>
+    <p>
+      From diagnostics to repairs, we put our customers&#39; needs first.
+    </p>
             </p>
             <p className="text-gray-600">
               - **State-of-the-Art Facility**: Our shop is equipped with advanced tools and technology to ensure precise and efficient service.
