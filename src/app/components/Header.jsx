@@ -29,6 +29,9 @@ const Header = () => {
         <li>
           <NavLink href="/contact-us">Contact Us</NavLink>
         </li>
+        <button>
+          <NavLink href="/book-appointment">Book An Appointment</NavLink>
+        </button>
       </ul>
     </nav>
   );

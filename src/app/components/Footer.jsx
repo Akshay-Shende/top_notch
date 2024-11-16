@@ -177,7 +177,7 @@ export default function App() {
                   clipRule="evenodd"
                 />
               </svg>
-              +91 70205 06047
+              +917020506047
             </p>
            
           </div>

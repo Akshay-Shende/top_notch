@@ -8,20 +8,20 @@ const NavLink = ({ href, children }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-
-    if (pathname === href) {
-      setIsActive(true);
-    } else {
-      setIsActive(false);
-    }
+    setIsActive(pathname === href);
   }, [pathname, href]);
 
   return (
     <Link
       href={href}
-      className={`${isActive ? "bg-red-700" : ""} px-4 py-2 rounded`}
+      className="relative px-4 py-2 text-gray-800 rounded group"
     >
       {children}
+      <span
+        className={`absolute left-1/2 bottom-0 h-[2px] w-0 bg-gray-500 transition-all duration-300 group-hover:w-full ${
+          isActive ? "w-full -translate-x-1/2" : "-translate-x-1/2"
+        }`}
+      />
     </Link>
   );
 };
