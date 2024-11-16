@@ -1,7 +1,15 @@
+'use client'
+import React from 'react';
+import Carousel from './components/Carousel';
+import WhyChooseUs from './components/WhyChooseUs';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>Akshay Shende</div>
-    
+   <>
+   <Carousel/>
+   <WhyChooseUs/>
+   </>
   );
-}
+};
+
+export default Home;
