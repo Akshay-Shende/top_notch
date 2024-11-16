@@ -1,30 +1,56 @@
-'use client';
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const Carousel = () => {
   const images = [
-    '/Images/corousel1.jpg',
-    '/Images/corousel2.jpg',
-    '/Images/corousel3.jpg',
+    {
+      src: '/Images/corousel1.jpg',
+      title: 'Performance without compromise',
+      buttonText: 'Learn More',
+    },
+    {
+      src: '/Images/corousel2.jpg',
+      title: 'Engineered for Excellence',
+      buttonText: 'Discover Now',
+    },
+    {
+      src: '/Images/corousel3.jpg',
+      title: 'Innovation at its Peak',
+      buttonText: 'Explore More',
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto slide the carousel every 3 seconds
+  useEffect(() => {
+    AOS.init(); // Initialize AOS
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // 3000ms = 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Clear the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    AOS.refresh(); // Refresh AOS animations on index change
+  }, [currentIndex]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Carousel Image */}
-      <div className="absolute inset-0">
+      <div
+        key={currentIndex} // Ensures re-render on image change
+        className="absolute inset-0"
+        data-aos="fade-right" // AOS animation
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <img
-          src={images[currentIndex]}
+          src={images[currentIndex].src}
           alt={`Carousel image ${currentIndex + 1}`}
           className="w-full h-full object-cover"
         />
@@ -35,9 +61,22 @@ const Carousel = () => {
 
       {/* Text and Button */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-        <h1 className="text-4xl font-bold mb-4">Performance without compromise</h1>
-        <button className="bg-black bg-opacity-50 text-white px-6 py-2 rounded-full">
-          Learn More
+        <h1
+          key={currentIndex} // Key ensures re-render for each new index
+          className="text-4xl font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          {images[currentIndex].title}
+        </h1>
+        <button
+          key={`button-${currentIndex}`} // Unique key for re-render
+          className="bg-black bg-opacity-50 text-white px-6 py-2 rounded-full"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          {images[currentIndex].buttonText}
         </button>
       </div>
 

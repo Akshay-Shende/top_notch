@@ -29,7 +29,7 @@ const FeatureCard = ({ imgSrc, title, description, link }) => {
 const WhyChooseUs = () => {
   const features = [
     {
-      imgSrc: "https://www.svgrepo.com/show/530438/ddos-protection.svg",
+      imgSrc: "/Images/breakdown.png",
       title: "Powered by ChatGPT",
       description:
         "The cutting-edge language model that makes interactions a breeze. With its user-friendly interface, effortlessly tap into the world of AI-generated text.",

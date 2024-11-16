@@ -3,6 +3,7 @@ import React from 'react';
 import Carousel from './components/Carousel';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonial from './components/Testimonial';
+import BrandsWeServeComponent from './components/BrandsWeServe';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
    <Carousel/>
    <WhyChooseUs/>
    <Testimonial/>
+   <BrandsWeServeComponent/>
    </>
   );
 };
