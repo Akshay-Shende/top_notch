@@ -22,6 +22,10 @@ const Carousel = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayText, setDisplayText] = useState(''); // For typewriter effect
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
     AOS.init(); // Initialize AOS
@@ -30,14 +34,41 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     AOS.refresh(); // Refresh AOS animations on index change
+    setCharIndex(0);
+    setDisplayText('');
+    setIsDeleting(false);
   }, [currentIndex]);
+
+  useEffect(() => {
+    const currentTitle = images[currentIndex].title;
+
+    const handleTyping = () => {
+      if (isDeleting) {
+        setDisplayText((prev) => prev.substring(0, prev.length - 1));
+        setTypingSpeed(50); // Faster speed when deleting
+        if (displayText === '') {
+          setIsDeleting(false);
+          setCharIndex(0);
+        }
+      } else {
+        setDisplayText((prev) => currentTitle.substring(0, prev.length + 1));
+        setTypingSpeed(150); // Slower speed when typing
+        if (displayText === currentTitle) {
+          setTimeout(() => setIsDeleting(true), 2000); // Pause before deleting
+        }
+      }
+    };
+
+    const typingTimeout = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(typingTimeout);
+  }, [displayText, isDeleting, currentIndex]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -67,7 +98,7 @@ const Carousel = () => {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          {images[currentIndex].title}
+          {displayText}
         </h1>
         <button
           key={`button-${currentIndex}`} // Unique key for re-render

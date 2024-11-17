@@ -11,43 +11,45 @@ import {
   import React from 'react'
   import { cn } from "@/lib/utils";
   const Services = () => {
-    const components = [
-      {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
-        description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
-      },
-      {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
-        description:
-          "For sighted users to preview content available behind a link.",
-      },
-      {
-        title: "Progress",
-        href: "/docs/primitives/progress",
-        description:
-          "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-      },
-      {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
-      },
-      {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
-        description:
-          "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-      },
-      {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
-        description:
-          "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-      },
-    ];
+    const services = [
+        {
+          title: "Oil Change",
+          href: "/services/oil-change",
+          description:
+            "Regular oil changes to keep your engine running smoothly and extend its life.",
+        },
+        {
+          title: "Brake Inspection",
+          href: "/services/brake-inspection",
+          description:
+            "Comprehensive brake system checks to ensure your safety on the road.",
+        },
+        {
+          title: "Tire Rotation",
+          href: "/services/tire-rotation",
+          description:
+            "Extend the lifespan of your tires with proper rotation and balancing.",
+        },
+        {
+          title: "Battery Check",
+          href: "/services/battery-check",
+          description:
+            "Ensure your vehicle's battery is in good condition and avoid unexpected breakdowns.",
+        },
+        {
+          title: "Engine Diagnostics",
+          href: "/services/engine-diagnostics",
+          description:
+            "Advanced diagnostics to identify and fix engine issues effectively.",
+        },
+        {
+          title: "AC Service",
+          href: "/services/ac-service",
+          description:
+            "Stay cool with our air conditioning inspection and repair services.",
+        },
+      ];
+      
     return (
       <NavigationMenu>
     <NavigationMenuList>
@@ -55,7 +57,7 @@ import {
             <NavigationMenuTrigger>Components</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] font-sans font-extralight">
-                {components.map((component) => (
+                {services.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
