@@ -96,7 +96,7 @@ export default function App() {
               mechanism.
             </p>
           </div>
-          {/* <!-- Products section --> */}
+          {/* <!-- Services section --> */}
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Services
