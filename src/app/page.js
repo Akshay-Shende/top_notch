@@ -4,6 +4,8 @@ import Carousel from './components/Carousel';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonial from './components/Testimonial';
 import BrandsWeServeComponent from './components/BrandsWeServe';
+import TopNotchExperience from './components/TopNotchExperience';
+import WhatsAppIcon from './components/WhatsAppIcon';
 
 const Home = () => {
   return (
@@ -12,6 +14,8 @@ const Home = () => {
    <WhyChooseUs/>
    <Testimonial/>
    <BrandsWeServeComponent/>
+   <TopNotchExperience/>
+   <WhatsAppIcon/>
    </>
   );
 };

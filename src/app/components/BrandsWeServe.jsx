@@ -1,7 +1,7 @@
 import React from "react";
 
 const BrandsWeServe = () => {
-  const Images = [
+  const images = [
     { src: "/Images/Audi.png", alt: "Audi logo" },
     { src: "/Images/Honda.png", alt: "Honda logo" },
     { src: "/Images/Hyundai.png", alt: "Hyundai logo" },
@@ -11,18 +11,30 @@ const BrandsWeServe = () => {
   ];
 
   return (
-    <section className="py-base container py-14 bg-gray-200">
-      <div className="grid gap-8 grid-cols-2 md:gap-y-16 md:grid-cols-6">
-        {Images.map((image, index) => (
-          <span
+    <section className="py-14 bg-gray-200">
+      {/* Header Section */}
+      <div className="text-center max-w-3xl mx-auto px-6">
+        <p className="text-base font-semibold text-primary-500">
+          Brands We Serve
+        </p>
+        <h3 className="mt-2 text-3xl font-bold tracking-tight text-gray-800 md:text-4xl">
+          We Offer Full-Service Auto Repair & Maintenance
+        </h3>
+      </div>
+
+      {/* Grid Section */}
+      <div className="grid gap-8 mt-12 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 px-6">
+        {images.map((image, index) => (
+          <div
             key={index}
-            className="w-full flex items-center justify-center"
+            className="flex items-center justify-center w-full"
           >
-            <span className="sr-only">{image.alt}</span>
-            <div aria-hidden="true">
-              <img src={image.src} alt={image.alt} />
-            </div>
-          </span>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-24 h-24 object-contain"
+            />
+          </div>
         ))}
       </div>
     </section>

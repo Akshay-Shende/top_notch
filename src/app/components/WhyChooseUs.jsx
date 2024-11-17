@@ -2,25 +2,27 @@ import React from "react";
 
 const FeatureCard = ({ imgSrc, title, description, link }) => {
   return (
-    <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
+    <li className="rounded-lg bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
       {link ? (
-        <a href={link} className="group">
-          <img src={imgSrc} alt={title} className="mx-auto h-10 w-10" />
-          <h3 className="my-3 font-display font-medium group-hover:text-primary-500">
-            {title}
-          </h3>
-          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-            {description}
-          </p>
+        <a href={link} className="group block h-full">
+          <div className="flex flex-col items-center">
+            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-100">
+              <img src={imgSrc} alt={title} className="h-8 w-8" />
+            </div>
+            <h3 className="text-lg font-semibold text-slate-900 group-hover:text-primary-500">
+              {title}
+            </h3>
+            <p className="mt-2 text-sm text-gray-600">{description}</p>
+          </div>
         </a>
       ) : (
-        <>
-          <img src={imgSrc} alt={title} className="mx-auto h-10 w-10" />
-          <h3 className="my-3 font-display font-medium">{title}</h3>
-          <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-            {description}
-          </p>
-        </>
+        <div className="flex flex-col items-center">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-100">
+            <img src={imgSrc} alt={title} className="h-8 w-8" />
+          </div>
+          <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+          <p className="mt-2 text-sm text-gray-600">{description}</p>
+        </div>
       )}
     </li>
   );
@@ -38,7 +40,7 @@ const WhyChooseUs = () => {
       imgSrc: "https://www.svgrepo.com/show/530442/port-detection.svg",
       title: "Easy to use",
       description:
-        "Simply input your subject, click the generate button, and the result will appear in seconds just like magick.",
+        "Simply input your subject, click the generate button, and the result will appear in seconds just like magic.",
     },
     {
       imgSrc: "https://www.svgrepo.com/show/530444/availability.svg",
@@ -70,15 +72,15 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="bg-gray-200 px-2 py-10">
-      <div id="features" className="mx-auto max-w-6xl">
-        <p className="text-center text-base font-semibold leading-7 text-primary-500">
-        Why Choose Us
+    <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-12">
+      <div id="features" className="mx-auto max-w-7xl px-6 lg:px-8">
+        <p className="text-center text-sm font-medium uppercase tracking-wide text-primary-500">
+          Why Choose Us
         </p>
-        <h3 className="text-center font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-        We Offer Full Service Auto Repair & Maintenance
+        <h3 className="mt-2 text-center text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          We Offer Full Service Auto Repair & Maintenance
         </h3>
-        <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
+        <ul className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
