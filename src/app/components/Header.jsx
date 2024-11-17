@@ -1,18 +1,21 @@
 "use client";
 import React from "react";
 import NavLink from "@/app/components/Navlinks";
-import { useRouter } from "next/navigation";
 import Services from "./Services";
 
-const Header = () => {
-  const router = useRouter();
-
+const Header = ({ isTopHeaderVisible }) => {
   return (
-    <nav className="flex justify-between items-center mx-7 my-5">
+    <nav
+      className={`sticky top-0 z-50 bg-white shadow-md flex items-center py-4 transition-all duration-300 ${
+        isTopHeaderVisible ? "pl-0" : "pl-4 justify-between"
+      }`}
+    >
       <ul>
-        <li>
-          <strong>Top Notch Auto Care</strong>
-        </li>
+        {!isTopHeaderVisible && (
+          <li>
+            <strong>Top Notch Auto Care</strong>
+          </li>
+        )}
       </ul>
       <ul className="flex items-center space-x-6">
         <li>
@@ -31,9 +34,10 @@ const Header = () => {
           <NavLink href="/contact-us">Contact Us</NavLink>
         </li>
         <li>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded">
-            <NavLink href="/book-appointment">Book An Appointment</NavLink>
-          </button>
+          <NavLink href="/workshop">Workshop</NavLink>
+        </li>
+        <li>
+          <NavLink href="/blogs">Blogs</NavLink>
         </li>
       </ul>
     </nav>
