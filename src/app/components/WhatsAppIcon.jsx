@@ -8,7 +8,7 @@ const WhatsAppIcon = () => {
         href="https://wa.me/<your-number>?text=Hello%20TopNotch%20Auto%20Care!"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 left-4 z-50 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110"
+        className="fixed bottom-6 left-4 z-50 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 animate-pulse-icon"
         aria-label="Chat with us on WhatsApp"
       >
         <svg

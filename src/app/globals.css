@@ -87,4 +87,22 @@ nav ul, nav ul li, nav ul li a {
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
+/* styles.css */
+.fixed {
+  position: fixed;
+  bottom: 1.5rem;  /* Adjust as necessary */
+  left: 1rem;      /* Adjust as necessary */
+  z-index: 50;     /* Ensure it's above other content */
+  background-color: #25d366; /* WhatsApp Green */
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fixed:hover {
+  transform: scale(1.1);
+}
+
+
 
