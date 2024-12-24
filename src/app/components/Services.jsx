@@ -13,40 +13,34 @@ import {
   const Services = () => {
     const services = [
         {
-          title: "Oil Change",
-          href: "/services/oil-change",
+          title: "Car Repair",
+          href: "/services/car-repair",
           description:
-            "Regular oil changes to keep your engine running smoothly and extend its life.",
+            "Our mechanical repairs cover everything from engine diagnostics to transmission repair, brake servicing, and suspension repairs. Whether it's a small fix or a major overhaul, we ensure quality workmanship and reliable results.",
         },
         {
-          title: "Brake Inspection",
-          href: "/services/brake-inspection",
+          title: "Car Electrical Works",
+          href: "/services/car-electrical-works",
           description:
-            "Comprehensive brake system checks to ensure your safety on the road.",
+            "We specialize in auto electrical repair services, including battery checks, alternator repair, wiring issues, and more. Our experienced electricians use advanced tools to quickly diagnose and repair electrical problems, ensuring your car’s electrical system is in perfect working order.",
         },
         {
-          title: "Tire Rotation",
-          href: "/services/tire-rotation",
+          title: "Denting & Painting Works",
+          href: "/services/denting-and-painting-works",
           description:
-            "Extend the lifespan of your tires with proper rotation and balancing.",
+            "If your car has been involved in an accident or you just need a cosmetic upgrade, our dent removal and car painting services will restore your car’s appearance. We match the original colour perfectly and use the latest techniques for a flawless finish.",
         },
         {
-          title: "Battery Check",
-          href: "/services/battery-check",
+          title: "Insurance Claims",
+          href: "/services/insurance-claims",
           description:
-            "Ensure your vehicle's battery is in good condition and avoid unexpected breakdowns.",
+            "At TopNotch Autocare, we help you navigate the insurance claims process efficiently. Our team works directly with your insurance provider to manage all the paperwork and ensure a hassle-free repair process for your car.",
         },
         {
-          title: "Engine Diagnostics",
-          href: "/services/engine-diagnostics",
+          title: "Detailing Works",
+          href: "/services/detailing-works",
           description:
-            "Advanced diagnostics to identify and fix engine issues effectively.",
-        },
-        {
-          title: "AC Service",
-          href: "/services/ac-service",
-          description:
-            "Stay cool with our air conditioning inspection and repair services.",
+            "Our car detailing services will give your vehicle a showroom shine. From interior detailing to exterior waxing, Teflon Coating, Paint protection films and ceramic coating, we ensure your car looks spotless inside and out.",
         },
       ];
       

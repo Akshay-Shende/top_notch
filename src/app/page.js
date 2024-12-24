@@ -15,8 +15,7 @@ const Home = () => {
    <Testimonial/>
    <BrandsWeServeComponent/>
    <TopNotchExperience/>
-   <WhatsAppIcon/>
-   </>
+</>
   );
 };
 
