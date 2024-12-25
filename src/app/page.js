@@ -6,6 +6,7 @@ import Testimonial from './components/Testimonial';
 import BrandsWeServeComponent from './components/BrandsWeServe';
 import TopNotchExperience from './components/TopNotchExperience';
 import WhatsAppIcon from './components/WhatsAppIcon';
+import ContactSection from './components/ContactSection';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
    <Testimonial/>
    <BrandsWeServeComponent/>
    <TopNotchExperience/>
+   <ContactSection/>
 </>
   );
 };

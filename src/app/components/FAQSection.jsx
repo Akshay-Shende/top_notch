@@ -8,7 +8,7 @@ const FAQSection = ({ faqs }) => {
     { name: "Page 3", href: "#", isActive: true }, // Active page
   ];
   return (
-    <div className="py-4 bg-white">
+    <div className="bg-white">
       {/* <div className="bg-gray-200 text-white py-10 rounded-lg">
         <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">F.A.Q</p>
         <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
@@ -40,7 +40,7 @@ const FAQSection = ({ faqs }) => {
             {faqs.map((faq, index) => (
               <li className="text-left mb-10" key={index}>
                 <div className="flex flex-row items-start mb-5">
-                  <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-gray-500 text-white border-4 border-white text-xl font-semibold">
                     <svg
                       width="30px"
                       fill="white"
@@ -70,10 +70,10 @@ const FAQSection = ({ faqs }) => {
                 </div>
 
                 <div className="flex flex-row items-start">
-                  <div className="bg-indigo-100 p-5 px-10 w-full flex items-center">
+                  <div className="bg-gray-300 p-5 px-10 w-full flex items-center">
                     <p className="text-gray-700 text-sm">{faq.answer}</p>
                   </div>
-                  <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
+                  <div className="hidden sm:flex items-center justify-center p-3 ml-3 rounded-full bg-gray-500 text-white border-4 border-white text-xl font-semibold">
                     <svg
                       height="25px"
                       fill="white"

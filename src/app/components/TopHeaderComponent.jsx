@@ -2,7 +2,7 @@ import React from "react";
 
 const TopHeader = () => {
   return (
-    <div className="bg-gray-700 text-white text-sm py-4 flex justify-between items-center px-4">
+    <div className="bg-gray-700 text-white text-sm py-2 flex justify-between items-center px-4">
       {/* Left Section: Company Name */}
       <div>
         <strong>Top Notch Auto Care</strong>
