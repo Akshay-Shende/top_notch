@@ -33,7 +33,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex items-center justify-center text-lg  transition-colors  focus:text-accent-foreground focus:outline-none text-lg font-semibold text-gray-500" // Removed button-like styles
+  "group inline-flex items-center justify-center text-base  transition-colors  focus:text-accent-foreground focus:outline-none text-base font-semibold text-gray-500" // Removed button-like styles
 )
 
 const NavigationMenuTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
@@ -41,7 +41,7 @@ const NavigationMenuTrigger = React.forwardRef(({ className, children, ...props 
     ref={ref}
     className={cn(
       navigationMenuTriggerStyle(),
-      "text-lg", // Add font and size utilities here
+      "text-base font-sans-serif", // Add font and size utilities here
       "group",
       className
     )}

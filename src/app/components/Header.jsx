@@ -6,7 +6,7 @@ import Services from "./Services";
 const Header = ({ isTopHeaderVisible }) => {
   return (
     <nav
-      className={`sticky top-0 z-50 shadow-md flex items-center py-6 transition-all duration-300 ${
+      className={`sticky top-0 z-50 shadow-md flex items-center py-4 transition-all duration-300 ${
         isTopHeaderVisible ? "bg-transparent pl-0" : "bg-white pl-4 justify-between"
       }`}
     >

@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="bg-gray-100 w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5">
+    <div className="bg-gray-100 w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5 pb-36">
       {/* Blue Background Section */}
       <div className="bg-gray-700 text-white py-12 rounded-lg relative">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
