@@ -32,41 +32,44 @@ const WhyChooseUs = () => {
   const features = [
     {
       imgSrc: "/Images/breakdown.png",
-      title: "Powered by ChatGPT",
+      title: "Diagnostics",
       description:
-        "The cutting-edge language model that makes interactions a breeze. With its user-friendly interface, effortlessly tap into the world of AI-generated text.",
-    },
+        "If your car needs a mobile diagnostic check done at your home or office, let AutoMechanica come to you.",
+      link: "/pricing",
+      },
     {
       imgSrc: "https://www.svgrepo.com/show/530442/port-detection.svg",
-      title: "Easy to use",
+      title: "Dent & Paint",
       description:
-        "Simply input your subject, click the generate button, and the result will appear in seconds just like magic.",
+        "Top Notch specializes in car dent repair and car painting services for a range of models.",
+      link: "/pricing",
     },
     {
       imgSrc: "https://www.svgrepo.com/show/530444/availability.svg",
-      title: "Custom settings",
+      title: "Oil / Lube / Filters",
       description:
-        "We offer advanced customization. You can freely combine options like roles, languages, publish, tones, lengths, and formats.",
-    },
+        "Top Notch proudly serves the Lube, Oil & Filter change needs of customers' vehicle performance while extending the life of your vehicle..",
+      link: "/pricing",
+      },
     {
       imgSrc: "https://www.svgrepo.com/show/530440/machine-vision.svg",
-      title: "Free trial",
+      title: "Brakes",
       description:
-        "We offer a free trial service without login. We provide many payment options including pay-as-you-go and subscription.",
+        "The brake system consists of different parts that can be fixed individually. A detailed quote is given to you after we perform our systematic brake evaluation..",
       link: "/pricing",
     },
     {
       imgSrc: "https://www.svgrepo.com/show/530450/page-analysis.svg",
-      title: "90+ templates",
+      title: "Suspension",
       description:
-        "We offer many templates covering areas such as writing, education, lifestyle and creativity to inspire your potential.",
+        "The suspension system of your vehicle protects you from bouncing up and down due to the bad road conditions and bumps in the road..",
       link: "/templates",
     },
     {
       imgSrc: "https://www.svgrepo.com/show/530453/mail-reception.svg",
-      title: "Use Anywhere",
+      title: "Detailing",
       description:
-        "Our product is compatible with multiple platforms including Web, Chrome, Windows and Mac, you can use MagickPen anywhere.",
+        "Top Notch offers professional car detail services at an affordable price. Our interior cleaning, detailing, and restoration services can help you recapture that new car look and smell.",
       link: "/download",
     },
   ];

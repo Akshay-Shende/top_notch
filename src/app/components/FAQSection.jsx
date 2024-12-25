@@ -1,14 +1,31 @@
 import React from "react";
-
+import Breadcrumb from "./Breadcrumb";
 const FAQSection = ({ faqs }) => {
+  const breadcrumbItems = [
+    { name: "Home", href: "#" },
+    { name: "Page 1", href: "#" },
+    // { name: "Page 2", href: "#" },
+    { name: "Page 3", href: "#", isActive: true }, // Active page
+  ];
   return (
-    <div className="py-4 bg-white text-center">
-      <div className="bg-gray-200 text-white py-10 rounded-lg">
+    <div className="py-4 bg-white">
+      {/* <div className="bg-gray-200 text-white py-10 rounded-lg">
         <p className="mt-4 text-sm leading-7 text-gray-500 font-regular">F.A.Q</p>
         <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
           Frequently Asked <span className="text-indigo-600">Questions</span>
         </h3>
-      </div>
+      </div> */}
+
+<div className="bg-custom-image bg-cover bg-center text-white py-24">
+          <h2 className="text-4xl font-bold mb-2">
+            About Top Notch Auto Care
+          </h2>
+          <p className="text-lg">
+            Committed to providing exceptional automotive services with a
+            dedication to quality, reliability, and customer satisfaction.
+          </p>
+          <Breadcrumb breadcrumbItems = {breadcrumbItems}/>
+        </div>
 
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
         {/* <div className="text-center">

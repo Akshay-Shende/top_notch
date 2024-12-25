@@ -1,18 +1,26 @@
 import React from "react";
+import Breadcrumb from "../components/Breadcrumb";
 
 const Page = () => {
+  const breadcrumbItems = [
+    { name: "Home", href: "#" },
+    { name: "Page 1", href: "#" },
+    // { name: "Page 2", href: "#" },
+    { name: "Page 3", href: "#", isActive: true }, // Active page
+  ];
   return (
     <div className="w-full bg-gray-100">
       <div className="mx-auto">
         {/* Header */}
-        <div className="bg-gray-800 text-white py-10 rounded-lg">
-          <h2 className="text-4xl font-bold text-center mb-2">
+        <div className="bg-custom-image bg-cover bg-center text-white py-24">
+          <h2 className="text-4xl font-bold mb-2">
             About Top Notch Auto Care
           </h2>
-          <p className="text-lg text-center">
+          <p className="text-lg">
             Committed to providing exceptional automotive services with a
             dedication to quality, reliability, and customer satisfaction.
           </p>
+          <Breadcrumb breadcrumbItems = {breadcrumbItems}/>
         </div>
 
         {/* Content Section

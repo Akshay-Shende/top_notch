@@ -7,7 +7,7 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      text: `Pepe is like a unicorn in a field of horses, magically bridging the gap between design and coding. His designs sparkle brighter than a disco ball at a 70s party, hitting that sweet spot between trendy and 'wow, did he really just pull that off?'`,
+      text:	"I’ve been coming to TopNotch Autocare for years for all my auto repairs. The team is knowledgeable, and the service is top-notch!" ,
       name: "Jhonny Mnemonic",
       role: "Chief Wizard of Nowhere Land",
       image:
@@ -15,7 +15,7 @@ const Testimonial = () => {
     },
     {
       id: 2,
-      text: `Working with Pepe is like finding a needle in a haystack – except the needle comes to you, and it's golden. His design eye is sharper than my grandma's kitchen knives, and trust me, those can slice through anything.`,
+      text: `•	“After my accident, TopNotch Autocare handled the insurance claims and did a fantastic job on the dent repair. Highly recommend!” `,
       name: "Roberta Austina",
       role: "Grandmaster of Excuse Crafting",
       image:
@@ -23,7 +23,7 @@ const Testimonial = () => {
     },
     {
       id: 3,
-      text: `Pepe is that rare blend of designer and developer who actually knows what 'deadline' means – a mythical creature in our industry. He whipped up landing pages faster than I could say Banana, with a flair that made me wonder if he moonlights as a magician.`,
+      text:	"I’ve been coming to TopNotch Autocare for years for all my auto repairs. The team is knowledgeable, and the service is top-notch!" ,
       name: "Manolito Gafotas",
       role: "Professional Procrastinator & Part-Time Visionary",
       image:
@@ -42,17 +42,17 @@ const Testimonial = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="bg-[#1a1a1f] relative overflow-hidden py-12">
+    <section className="bg-gray-600 relative overflow-hidden py-12 mb-8">
       <div className="text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-base font-semibold text-primary-500">
-          Why Customers Say About Us
+          What Customers Say About Us
         </p>
         <h3 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
           We Offer Full Service Auto Repair & Maintenance
         </h3>
       </div>
 
-      <div className="relative max-w-5xl mx-auto mt-12 px-6 lg:px-12">
+      <div className="relative max-w-7xl mx-auto mt-12 px-6 lg:px-12">
         <div className="bg-[#1a1a1f]/50 p-10 lg:p-20 rounded-3xl border border-white/10 backdrop-blur-lg shadow-2xl">
           {/* Testimonial Content */}
           {testimonials.map((testimonial) => (

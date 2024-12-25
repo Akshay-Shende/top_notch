@@ -1,8 +1,24 @@
 import React from 'react';
-
+import Breadcrumb from '../components/Breadcrumb';
 const Page = () => {
+    const breadcrumbItems = [
+        { name: "Home", href: "#" },
+        { name: "Page 1", href: "#" },
+        // { name: "Page 2", href: "#" },
+        { name: "Page 3", href: "#", isActive: true }, // Active page
+      ];
     return (
         <section className=" body-font relative">
+            <div className="bg-custom-image bg-cover bg-center text-white py-24">
+          <h2 className="text-4xl font-bold mb-2">
+            About Top Notch Auto Care
+          </h2>
+          <p className="text-lg">
+            Committed to providing exceptional automotive services with a
+            dedication to quality, reliability, and customer satisfaction.
+          </p>
+          <Breadcrumb breadcrumbItems = {breadcrumbItems}/>
+        </div>
             <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                 <div
                     className="lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">

@@ -77,7 +77,10 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  backgroundImage: {
+			'custom-image': "url('/Images/corousel1.jpg')",
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
