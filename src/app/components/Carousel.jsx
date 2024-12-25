@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -26,45 +26,12 @@ const Carousel = () => {
     },
   ];
 
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     AOS.init(); // Initialize AOS
   }, []);
 
-  useEffect(() => {
-    const currentTitle = images[currentIndex]?.title || '';
-
-    const handleTyping = () => {
-      if (isDeleting) {
-        setDisplayText((prev) => prev.substring(0, prev.length - 1));
-        setTypingSpeed(50); // Faster speed when deleting
-        if (displayText === '') {
-          setIsDeleting(false);
-          setCharIndex(0);
-        }
-      } else {
-        setDisplayText((prev) => currentTitle.substring(0, prev.length + 1));
-        setTypingSpeed(150); // Slower speed when typing
-        if (displayText === currentTitle) {
-          setTimeout(() => setIsDeleting(true), 2000); // Pause before deleting
-        }
-      }
-    };
-
-    const typingTimeout = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(typingTimeout);
-  }, [displayText, isDeleting, currentIndex]);
-
   const handleSlideChange = (swiper) => {
-    setCurrentIndex(swiper.realIndex);
-    setIsDeleting(false);
-    setCharIndex(0);
-    setDisplayText('');
+    // This can be used if you need to handle slide change actions
   };
 
   return (
@@ -103,7 +70,7 @@ const Carousel = () => {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  {displayText}
+                  {image.title}
                 </h1>
                 <button
                   className="bg-white text-black px-6 py-2 rounded-full shadow-lg"

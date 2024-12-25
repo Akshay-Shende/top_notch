@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import TopHeader from "./TopHeaderComponent";
 import { useState, useEffect } from "react";
 import WhatsAppIcon from "./WhatsAppIcon";
+import ScrollToTopButton from "./ScrollButton";
 
 const Layout = ({ children }) => {
   const [isTopHeaderVisible, setIsTopHeaderVisible] = useState(true);
@@ -23,7 +24,8 @@ const Layout = ({ children }) => {
       <TopHeader />
       <Header isTopHeaderVisible={isTopHeaderVisible} />
       {children}
-      <WhatsAppIcon/>
+      <ScrollToTopButton/>
+      <WhatsAppIcon/> 
       <Footer />
     </>
   );
