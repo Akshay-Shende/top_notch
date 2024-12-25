@@ -15,10 +15,11 @@ const Page = () => {
         <h2 className="text-5xl font-extrabold mb-4">
           Car Repair
         </h2>
-        <p className="text-xl  mb-6 leading-relaxed max-w-5xl">
-          At Top Notch Auto Care, we are committed to delivering exceptional automotive services 
-          with a steadfast dedication to quality, reliability, and customer satisfaction. Your vehicle deserves the best—and that's exactly what we offer.
-        </p>
+        <p className="text-xl mb-6 leading-relaxed max-w-5xl">
+  At Top Notch Auto Care, we are committed to delivering exceptional automotive services 
+  with a steadfast dedication to quality, reliability, and customer satisfaction. Your vehicle deserves the best&mdash;and that&apos;s exactly what we offer.
+</p>
+
         <Breadcrumb breadcrumbItems={breadcrumbItems} />
       </div>
 

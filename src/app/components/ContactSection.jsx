@@ -6,9 +6,8 @@ const ContactSection = () => {
       {/* Blue Background Section */}
       <div className="bg-gray-700 text-white py-12 rounded-lg relative">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">Let's talk</h1>
-          
-        </div>
+        <h1 className="text-4xl font-bold mb-4">Let&apos;s talk</h1>
+          </div>
 
         {/* Overlay Form */}
         <div className="absolute top-[145%] left-[73%] transform -translate-x-1/2 -translate-y-1/4 bg-white shadow-md rounded-lg p-6 w-11/12 lg:w-[45%]">
