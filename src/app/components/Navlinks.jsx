@@ -14,7 +14,7 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className="relative px-4 py-2 text-gray-800 rounded group"
+      className="relative px-4 py-2 text-gray-800 rounded group text-lg"
     >
       {children}
       <span

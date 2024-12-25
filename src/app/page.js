@@ -7,6 +7,7 @@ import BrandsWeServeComponent from './components/BrandsWeServe';
 import TopNotchExperience from './components/TopNotchExperience';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import ContactSection from './components/ContactSection';
+import ServiceTimeline from './components/ServiceTimeline';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
    <BrandsWeServeComponent/>
    <TopNotchExperience/>
    <ContactSection/>
+   <ServiceTimeline/>
 </>
   );
 };
