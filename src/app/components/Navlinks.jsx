@@ -14,14 +14,13 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className="relative px-4 text-gray-500 rounded group text-base font-semibold"
+      className={`relative px-4 text-base font-semibold ${
+        isActive
+          ? "text-blue-500" // active link color
+          : "text-gray-500 hover:text-blue-500" // inactive link color and hover effect
+      }`}
     >
       {children}
-      <span
-        className={`absolute left-1/2 bottom-[2px] h-[2px] w-0 bg-gray-500 transition-all duration-300 group-hover:w-full ${
-          isActive ? "w-full -translate-x-1/2" : "-translate-x-1/2"
-        }`}
-      />
     </Link>
   );
 };
