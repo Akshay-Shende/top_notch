@@ -1,5 +1,34 @@
 import React, { useState } from "react";
 
+const AccordionItem = ({ isActive, onClick, title, children }) => (
+  <div>
+    <button
+      className={`relative flex items-center w-full py-4 text-left border-t ${
+        isActive ? "font-bold text-primary-500" : "text-gray-700"
+      }`}
+      onClick={onClick}
+    >
+      <span className="flex-1">{title}</span>
+      <svg
+        className={`w-5 h-5 transform transition-transform ${
+          isActive ? "rotate-90" : ""
+        }`}
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path d="M6 10l4-4 4 4H6z" />
+      </svg>
+    </button>
+    <div
+      className={`overflow-hidden transition-max-height duration-300 ${
+        isActive ? "max-h-screen" : "max-h-0"
+      }`}
+    >
+      <div className="p-4 text-gray-700">{children}</div>
+    </div>
+  </div>
+);
+
 const Tab = ({ isActive, onClick, title }) => (
   <button
     onClick={onClick}
@@ -13,18 +42,9 @@ const Tab = ({ isActive, onClick, title }) => (
   </button>
 );
 
-const TabContent = ({ isVisible, children }) => (
-  <div
-    className={`mt-6 transition-opacity duration-300 ${
-      isVisible ? "opacity-100" : "opacity-0 hidden"
-    }`}
-  >
-    {children}
-  </div>
-);
-
 const TopNotchExperience = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [activeAccordion, setActiveAccordion] = useState(null);
 
   const tabs = [
     {
@@ -105,7 +125,6 @@ const TopNotchExperience = () => {
 
   return (
     <section className="py-16 bg-gray-100">
-      {/* Header Section */}
       <div className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-lg font-semibold text-primary-500 uppercase tracking-wide">
           TopNotch Experience
@@ -118,8 +137,8 @@ const TopNotchExperience = () => {
         </p>
       </div>
 
-      {/* Tab Navigation */}
-      <div className="mt-12 max-w-4xl mx-auto">
+      {/* Tabs for desktop and tablets */}
+      <div className="hidden md:block mt-12 max-w-4xl mx-auto">
         <div className="flex border-b border-gray-200">
           {tabs.map((tab, index) => (
             <Tab
@@ -130,12 +149,22 @@ const TopNotchExperience = () => {
             />
           ))}
         </div>
+        <div className="mt-6">{tabs[activeTab].content}</div>
+      </div>
 
-        {/* Tab Content */}
+      {/* Accordion for mobile */}
+      <div className="block md:hidden mt-12 max-w-4xl mx-auto">
         {tabs.map((tab, index) => (
-          <TabContent key={index} isVisible={activeTab === index}>
+          <AccordionItem
+            key={index}
+            title={tab.title}
+            isActive={activeAccordion === index}
+            onClick={() =>
+              setActiveAccordion(activeAccordion === index ? null : index)
+            }
+          >
             {tab.content}
-          </TabContent>
+          </AccordionItem>
         ))}
       </div>
     </section>

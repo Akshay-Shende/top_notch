@@ -2,15 +2,46 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="bg-gray-100 w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5 pb-36">
+    <div className="bg-gray-100 w-11/12 lg:w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5 pb-36">
       {/* Blue Background Section */}
-      <div className="bg-gray-700 text-white py-12 rounded-lg relative">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <h1 className="text-4xl font-bold mb-4">Let&apos;s talk</h1>
+      <div className="bg-gray-700 text-white py-8 lg:py-12 rounded-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center lg:text-left">
+            Let&apos;s talk
+          </h1>
+        </div>
+
+        {/* Main Content Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 text-white">
+          {/* Left Section */}
+          <div>
+            <p className="text-lg pb-6 text-center lg:text-left">
+              We’re here to assist you in identifying the products and solutions
+              from our range that align most effectively with your project
+              requirements.
+            </p>
+            <h2 className="text-2xl font-semibold mb-4 text-center lg:text-left">
+              Why Us
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <ul className="space-y-2">
+                <li>✔ Strong Financial Background</li>
+                <li>✔ Quality Oriented</li>
+                <li>✔ Comprehensive Solutions</li>
+                <li>✔ Expertise of over 3 decades</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>✔ Complete Inhouse Production</li>
+                <li>✔ Partnering with Renowned Global Brands</li>
+                <li>✔ Timely Delivery</li>
+                <li>✔ Dedicated Service Team</li>
+              </ul>
+            </div>
           </div>
+        </div>
 
         {/* Overlay Form */}
-        <div className="absolute top-[145%] left-[73%] transform -translate-x-1/2 -translate-y-1/4 bg-white shadow-md rounded-lg p-6 w-11/12 lg:w-[45%]">
+        <div className="bg-white shadow-md rounded-lg p-6 w-11/12 sm:w-9/12 lg:w-[45%] mx-auto">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
             Schedule a Call
           </h2>
@@ -98,33 +129,6 @@ const ContactSection = () => {
               </button>
             </div>
           </form>
-        </div>
-      </div>
-
-      {/* Main Content Section */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Section */}
-        <div>
-        <p className="text-lg pb-6">
-            We’re here to assist you in identifying the products and solutions
-            from our range that align most effectively with your project
-            requirements.
-          </p>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why Us</h2>
-          <div className="grid grid-cols-2 gap-4 text-gray-700">
-            <ul className="space-y-2">
-              <li>✔ Strong Financial Background</li>
-              <li>✔ Quality Oriented</li>
-              <li>✔ Comprehensive Solutions</li>
-              <li>✔ Expertise of over 3 decades</li>
-            </ul>
-            <ul className="space-y-2">
-              <li>✔ Complete Inhouse Production</li>
-              <li>✔ Partnering with Renowned Global Brands</li>
-              <li>✔ Timely Delivery</li>
-              <li>✔ Dedicated Service Team</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
