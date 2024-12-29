@@ -10,7 +10,7 @@ const TopHeader = () => {
         </div>
 
         {/* Right Section: Contact Info and Button */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-base space-y-2 sm:space-y-0">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-base space-y-2 sm:space-y-0 lg:text-sm">
           {/* Phone Number */}
           <span>
             📞{" "}
@@ -22,11 +22,11 @@ const TopHeader = () => {
             </a>
           </span>
           {/* Operating Hours */}
-          <span>🕒 Mon-Sat: 9:00 AM - 7:00 PM</span>
+          <span className=" text-sm">🕒 Mon-Sat: 9:00 AM - 7:00 PM</span>
           {/* Appointment Button */}
           <a
             href="/appointment"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-sm sm:text-base"
+            className="px-4 py-1 border border-rose-600 text-rose-600 transition hover:bg-rose-600 hover:text-white md:mt-0 "
           >
             Book an Appointment
           </a>
