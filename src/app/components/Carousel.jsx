@@ -6,23 +6,24 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import parse from 'react-html-parser';
 
 const Carousel = () => {
   const images = [
     {
-      src: "/Images/corousel1.jpg",
-      title: "Performance without compromise",
-      buttonText: "Learn More",
+      src: "/Images/corousel1.webp",
+      title: "Professional Auto Repair <br />& Maintenance",
+      buttonText: "Contact Us",
     },
     {
-      src: "/Images/corousel2.jpg",
-      title: "Engineered for Excellence",
-      buttonText: "Discover Now",
+      src: "/Images/corousel2.webp",
+      title: "Performance Without <br /> Compromise",
+      buttonText: "Contact Us",
     },
     {
-      src: "/Images/corousel3.jpg",
-      title: "Innovation at its Peak",
-      buttonText: "Explore More",
+      src: "/Images/corousel3.webp",
+      title: "Luxury Car Care <br /> Delivered",
+      buttonText: "Contact Us",
     },
   ];
 
@@ -60,18 +61,18 @@ const Carousel = () => {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Black Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               {/* Text and Button */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+              <div className="absolute inset-0 flex flex-col justify-center items-start text-start text-white p-8 lg:ms-24 sm:ms-13 lg:-mt-44">
                 <h1
-                  className="text-4xl font-bold mb-4"
+                  className="text-5xl font-bold mb-4 text-start leading-normal"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  {image.title}
+                  {parse(image.title)}
                 </h1>
                 <button
-                  className="bg-white text-black px-6 py-2 rounded-full shadow-lg hover:bg-gray-300"
+                  className="bg-white text-black px-6 py-2 shadow-lg hover:bg-gray-300 mt-2 justify-start"
                   data-aos="fade-up"
                   data-aos-delay="300"
                   data-aos-duration="1000"

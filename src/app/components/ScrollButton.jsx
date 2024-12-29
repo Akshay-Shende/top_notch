@@ -25,7 +25,7 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-gray-500"
+          className="bg-gray-700"
           style={{
             position: "fixed",
             bottom: "20px",
