@@ -6,8 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import parse from 'react-html-parser';
-
 const Carousel = () => {
   const images = [
     {
@@ -63,23 +61,25 @@ const Carousel = () => {
               {/* Black Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               {/* Text and Button */}
-              <div className="absolute inset-0 flex flex-col justify-center items-start text-start text-white p-8 lg:ms-24 sm:ms-13 lg:-mt-44">
-                <h1
-                  className="text-5xl font-bold mb-4 text-start leading-normal"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  {parse(image.title)}
-                </h1>
-                <button
-                  className="bg-white text-black px-6 py-2 shadow-lg hover:bg-gray-300 mt-2 justify-start"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                  data-aos-duration="1000"
-                >
-                  {image.buttonText}
-                </button>
-              </div>
+              <div
+  className="absolute inset-0 flex flex-col justify-center items-start text-start text-white p-8 lg:ms-24 sm:ms-13 lg:-mt-44"
+>
+  <h1
+    className="text-5xl font-bold mb-4 text-start leading-normal"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    dangerouslySetInnerHTML={{ __html: image.title }} // Use the correct `image` object
+  ></h1>
+  <button
+    className="bg-white text-black px-6 py-2 shadow-lg hover:bg-gray-300 mt-2 justify-start"
+    data-aos="fade-up"
+    data-aos-delay="300"
+    data-aos-duration="1000"
+  >
+    {image.buttonText}
+  </button>
+</div>
+
             </div>
           </SwiperSlide>
         ))}
