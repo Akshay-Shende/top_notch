@@ -133,7 +133,8 @@ const Testimonial = () => {
 
               <div className="mt-4">
                 <p className="text-2xl font-bold text-rose-600 sm:text-3xl">
-                  Stayin' Alive
+               Stayin&apos; Alive
+
                 </p>
 
                 <p className="mt-4 leading-relaxed text-gray-700">
@@ -201,7 +202,7 @@ const Testimonial = () => {
 
               <div className="mt-4">
                 <p className="text-2xl font-bold text-rose-600 sm:text-3xl">
-                  Stayin' Alive
+                Stayin&apos; Alive
                 </p>
 
                 <p className="mt-4 leading-relaxed text-gray-700">
@@ -269,7 +270,7 @@ const Testimonial = () => {
 
               <div className="mt-4">
                 <p className="text-2xl font-bold text-rose-600 sm:text-3xl">
-                  Stayin' Alive
+                Stayin&apos; Alive
                 </p>
 
                 <p className="mt-4 leading-relaxed text-gray-700">
