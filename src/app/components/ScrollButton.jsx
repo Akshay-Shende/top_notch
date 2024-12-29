@@ -44,7 +44,7 @@ const ScrollToTopButton = () => {
             zIndex: 1000,
           }}
         >
-<span className="text-xl">↑</span>
+<span className="text-2xl font-extrabold">↑</span>
         </button>
       )}
    

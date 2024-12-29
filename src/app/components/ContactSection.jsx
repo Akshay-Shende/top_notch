@@ -2,9 +2,9 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="bg-gray-100 w-11/12 lg:w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5 pb-36">
+    <div className="bg-gray-100 w-11/12 lg:w-10/12 items-center justify-center min-h-screen mx-auto rounded-lg my-5">
       {/* Grey Background Section */}
-      <div className="bg-gray-700 text-white py-8 lg:py-12 rounded-lg">
+      <div className="bg-gray-700 text-white pt-8  rounded-lg ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center lg:text-left">
             Let&apos;s talk
