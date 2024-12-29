@@ -42,7 +42,7 @@ const Header = ({ isTopHeaderVisible }) => {
           <li className="border-b lg:border-none">
             <NavLink href="/about-us">About Us</NavLink>
           </li>
-          <li className="border-b lg:border-none">
+          <li className="border-b lg:border-none ">
             <Services />
           </li>
           <li className="border-b lg:border-none">
