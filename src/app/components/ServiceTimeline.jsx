@@ -31,25 +31,27 @@ const ServiceTimeline = () => {
   ];
 
   return (
-    <div className="py-16 px-8 bg-gray-50">
-        <h1 className=" text-center text-4xl mb-7">How Top Notch Works?</h1>
+    <div className="py-16 px-4 sm:px-8 bg-gray-50">
+      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold mb-12">
+        How Top Notch Works?
+      </h1>
       <div className="max-w-6xl mx-auto">
         <div className="relative">
-          {/* Vertical line */}
+          {/* Vertical Line */}
           <div className="absolute top-0 left-1/2 w-1 bg-yellow-500 h-full transform -translate-x-1/2"></div>
 
           {/* Timeline steps */}
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-16 lg:mb-24"
+              className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 mb-12 lg:mb-24"
             >
               {/* Left content */}
-              <div className="lg:w-1/2 text-right pr-8">
-                <h3 className="text-xl font-bold text-gray-800">
+              <div className="text-right pr-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800">
                   {step.left}
                 </h3>
-                <p className="text-base text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   {index + 1}. {step.right}
                 </p>
               </div>
@@ -58,8 +60,8 @@ const ServiceTimeline = () => {
               <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
 
               {/* Right content */}
-              <div className="lg:w-1/2 text-left pl-8">
-                <p className="text-base text-gray-600">
+              <div className="text-left pl-4">
+                <p className="text-sm sm:text-base text-gray-600">
                   {step.right}
                 </p>
               </div>
