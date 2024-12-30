@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function App() {
@@ -123,10 +124,10 @@ export default function App() {
               Useful links
             </h6>
             <p className="mb-4">
-              <a href= "/" className="text-neutral-600 dark:text-neutral-200">Home</a>
+              <Link href= "/" className="text-neutral-600 dark:text-neutral-200">Home</Link>
             </p>
             <p className="mb-4">
-              <a href= "/about-us" className="text-neutral-600 dark:text-neutral-200">About Us</a>
+              <Link href= "/about-us" className="text-neutral-600 dark:text-neutral-200">About Us</Link>
             </p>
             <p className="mb-4">
               <a className="text-neutral-600 dark:text-neutral-200">Services</a>
