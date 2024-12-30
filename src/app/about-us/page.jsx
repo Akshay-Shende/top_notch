@@ -4,9 +4,7 @@ import Breadcrumb from "../components/Breadcrumb";
 const Page = () => {
   const breadcrumbItems = [
     { name: "Home", href: "#" },
-    { name: "Page 1", href: "#" },
-    // { name: "Page 2", href: "#" },
-    { name: "Page 3", href: "#", isActive: true }, // Active page
+    { name: "About Us", href: "#", isActive: true }, // Active page
   ];
   return (
     <div className="w-full bg-gray-100">

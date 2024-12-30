@@ -2,7 +2,7 @@ import React from "react";
 
 const TopHeader = () => {
   return (
-    <div className="bg-gray-700 text-white text-sm py-2 px-4">
+    <div className="bg-gray-700 text-white text-sm pb-1 pt-1 px-4">
       <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
         {/* Left Section: Company Name */}
         <div className="text-center sm:text-left">
@@ -16,13 +16,13 @@ const TopHeader = () => {
             📞{" "}
             <a
               href="tel:+917020506047"
-              className="underline hover:text-blue-300"
+              className=" hover:text-blue-300"
             >
               +917020506047
             </a>
           </span>
           {/* Operating Hours */}
-          <span className=" text-sm">🕒 Mon-Sat: 9:00 AM - 7:00 PM</span>
+          <span className=" text-sm">🕒 Mon-Sat: 9:30 AM - 9:00 PM</span>
           {/* Appointment Button */}
           <a
             href="/appointment"

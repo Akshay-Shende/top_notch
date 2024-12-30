@@ -79,7 +79,7 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		  backgroundImage: {
-			'custom-image': "url('/Images/corousel1.jpg')",
+			'custom-image': "url('/Images/corousel1.webp')",
 		  },
   	}
   },

@@ -3,9 +3,7 @@ import Breadcrumb from '../components/Breadcrumb';
 const Page = () => {
     const breadcrumbItems = [
         { name: "Home", href: "#" },
-        { name: "Page 1", href: "#" },
-        // { name: "Page 2", href: "#" },
-        { name: "Page 3", href: "#", isActive: true }, // Active page
+        { name: "Contact Us", href: "#", isActive: true }, // Active page
       ];
     return (
         <section className=" body-font relative">

@@ -31,7 +31,7 @@ const FeatureCard = ({ imgSrc, title, description, link }) => {
 const WhyChooseUs = () => {
   const features = [
     {
-      imgSrc: "/Images/breakdown.png",
+      imgSrc: "/Images/Diagnostics.png",
       title: "Diagnostics",
       description:
         "If your car needs a mobile diagnostic check done at your home or office, let AutoMechanica come to you.",

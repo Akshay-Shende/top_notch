@@ -3,9 +3,7 @@ import Breadcrumb from "./Breadcrumb";
 const FAQSection = ({ faqs }) => {
   const breadcrumbItems = [
     { name: "Home", href: "#" },
-    { name: "Page 1", href: "#" },
-    // { name: "Page 2", href: "#" },
-    { name: "Page 3", href: "#", isActive: true }, // Active page
+    { name: "FAQs", href: "#", isActive: true }, // Active page
   ];
   return (
     <div className="bg-white">
